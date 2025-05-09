@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TavernSystem", "TavernSystem\TavernSystem.csproj", "{6360C118-1C62-449A-8053-3C861298A6B0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TavernSystem.API", "TavernSystem.API\TavernSystem.API.csproj", "{47D48B2B-F637-46F7-A0F5-E6E36E5E463A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TavernSystem.API", "TavernSystem.API\TavernSystem.API.csproj", "{6360C118-1C62-449A-8053-3C861298A6B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TavernSystem.Models", "TavernSystem.Models\TavernSystem.Models.csproj", "{ACAB4432-7D87-4061-9032-1898780B66E8}"
 EndProject
@@ -20,10 +18,6 @@ Global
 		{6360C118-1C62-449A-8053-3C861298A6B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6360C118-1C62-449A-8053-3C861298A6B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6360C118-1C62-449A-8053-3C861298A6B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{47D48B2B-F637-46F7-A0F5-E6E36E5E463A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47D48B2B-F637-46F7-A0F5-E6E36E5E463A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47D48B2B-F637-46F7-A0F5-E6E36E5E463A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47D48B2B-F637-46F7-A0F5-E6E36E5E463A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ACAB4432-7D87-4061-9032-1898780B66E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ACAB4432-7D87-4061-9032-1898780B66E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACAB4432-7D87-4061-9032-1898780B66E8}.Release|Any CPU.ActiveCfg = Release|Any CPU

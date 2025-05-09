@@ -6,4 +6,13 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\TavernSystem.Models\TavernSystem.Models.csproj" />
+      <ProjectReference Include="..\TavernSystem.Repositories\TavernSystem.Repositories.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.0-preview1.25120.4" />
+    </ItemGroup>
+
 </Project>
