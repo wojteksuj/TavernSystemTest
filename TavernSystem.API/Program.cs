@@ -1,4 +1,5 @@
 using TavernSystem.Application;
+using TavernSystem.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("MyDatabase");
@@ -36,9 +37,10 @@ app.MapGet("/api/adventurers", (IAdventurerService adventurerService) =>
 
 app.MapGet("/api/adventurers/{id}", (int id, IAdventurerService service) =>
 {
-    var adventurer = service.GetAdventurerById(id);
-    if(adventurer is null) return Results.NotFound();
+    AdventurerPerson? adventurer = service.GetAdventurerById(id);
+    if(adventurer == null) return Results.NotFound();
     return Results.Ok(adventurer);
+
 });
 
 

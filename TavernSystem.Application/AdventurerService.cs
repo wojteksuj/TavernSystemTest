@@ -51,7 +51,7 @@ public class AdventurerService : IAdventurerService
         using SqlConnection connection = new SqlConnection(_connectionString);
         connection.Open();
 
-        const string baseQuery = "SELECT a.Id, a.Nickname, r.Race, e.Experience, p.Id, p.FirstName, p.MiddleName, p.LastName, p.HasBounty FROM Adventurer a JOIN Race r ON a.RaceId = r.Id JOIN ExperienceLevel e ON a.ExperienceId = e.Id JOIN Person p ON p.Id = a.PersonId WHERE a.Id = @adventurerId";
+        const string baseQuery = "SELECT a.Id, a.Nickname, r.Name, e.Name, p.Id, p.FirstName, p.MiddleName, p.LastName, p.HasBounty FROM Adventurer a JOIN Race r ON a.RaceId = r.Id JOIN ExperienceLevel e ON a.ExperienceId = e.Id JOIN Person p ON p.Id = a.PersonId WHERE a.Id = @adventurerId";
         
         using SqlCommand baseCommand = new SqlCommand(baseQuery, connection);
         baseCommand.Parameters.AddWithValue("@adventurerId", adventurerId);
