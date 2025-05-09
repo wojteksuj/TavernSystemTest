@@ -79,6 +79,18 @@ public class AdventurerService : IAdventurerService
         return adventurerPerson;
     }
 
+    public bool addAdventurer(int id, string nickname, int idRace, int idExperience, int idPerson)
+    {
+        
+        if()
+        
+        using SqlConnection connection = new SqlConnection(_connectionString);
+        connection.Open();
+        
+        
+        
+    }
+
 
 
 }

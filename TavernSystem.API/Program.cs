@@ -1,3 +1,5 @@
+using System.Text.Json;
+using System.Text.Json.Nodes;
 using TavernSystem.Application;
 using TavernSystem.Repositories;
 
@@ -43,6 +45,24 @@ app.MapGet("/api/adventurers/{id}", (int id, IAdventurerService service) =>
 
 });
 
+app.MapPost("/api/adventurers", async (IAdventurerService deviceService, HttpRequest request) =>
+    {
+        
+        using var reader = new StreamReader(request.Body);
+        string rawJson = await reader.ReadToEndAsync();
+
+        var json = JsonNode.Parse(rawJson);
+        if (json is null)
+            return Results.BadRequest("Invalid JSON");
+
+        var options = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        };
+
+        return Results.Created();
+    })
+    .Accepts<string>("application/json");
 
 
 app.Run();
